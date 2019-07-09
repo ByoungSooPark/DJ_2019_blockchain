@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>한국전파진흥협회 대전교육센터</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+</head>
+<body>
+<div id="map" style="width: 1300px; height: 850px;"></div>
+<script>
+    
+    var map = L.map('map', {crs: L.CRS.Simple});
+    var bounds = [[0,0], [768,1024]]; // 이미지의 해상도를 bounds로 설정한다.
+    
+    L.imageOverlay('seat.png', bounds).addTo(map); // 배경 이미지를 설정한다.
+    
+    var line_1 = 200;
+    var line_2 = 310;
+    var line_3 = 420;
+    var line_4 = 530;
+    var line_5 = 640;
+    
+    
+    var desk_1 = 1000;
+    var desk_2 = 790;
+    var desk_3 = 580;
+    var desk_4 = 370;
+    var desk_5 = 160;
+    
+    L.circle([line_5, desk_5], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department <br /> git address : http://www.naver.com");
+    L.circle([line_5, desk_4], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_5, desk_3], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_5, desk_2], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_5, desk_1], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    
+    L.circle([line_4, desk_5], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_4, desk_4], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_4, desk_3], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_4, desk_2], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_4, desk_1], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    
+    L.circle([line_3, desk_5], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_3, desk_4], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_3, desk_3], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_3, desk_2], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+    L.circle([line_3, desk_1], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("iwatsuki", {permanent: true, direction: 'center'}).openTooltip()
+    .bindPopup("iwatsuki <br />IT Support Department");
+
+
+    L.circle([line_2, desk_5], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("Name B", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_2, desk_4], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("Name A", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_2, desk_3], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("Name B", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_2, desk_2], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("Name A", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_2, desk_1], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("Name B", {permanent: true, direction: 'center'}).openTooltip();
+    
+    
+    
+    L.circle([line_1, desk_4], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("최다올", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_1, desk_3], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("형원", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_1, desk_2], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("박태희", {permanent: true, direction: 'center'}).openTooltip();
+    L.circle([line_1, desk_1], {color: 'green',radius: 35}).addTo(map)
+    .bindTooltip("김보경", {permanent: true, direction: 'center'}).openTooltip();
+    
+    
+    L.circle([60, 900], {color: 'red',radius: 55}).addTo(map)
+    .bindTooltip("강사", {permanent: true, direction: 'center'}).openTooltip();
+    
+    map.fitBounds(bounds); // 표현 영역을 설정한다
+</script>
+</body>
+</html>
+<!-- 
+	교육생들 자리 위치와 이름/프로젝트 git 주소를 한번에 관리하고 싶다.
+	사진 / 이름 / 핸드폰 번호 / 이메일도 한번에 ...
+	참고자료 :: 
+	https://engineering.linecorp.com/ko/blog/floor-map-management-system-on-web-with-leaflet/?fbclid=IwAR2CV1VMw-bK6JM7dEUCef1eyBJDQ_Raedwoe_bocbbpBE1Krgo-UmHvbTs
+-->
